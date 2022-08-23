@@ -1,0 +1,33 @@
+body{
+    margin: 0px;
+}
+
+.contenedor{
+    background-color: blue;
+    /* Propiedades del Modelo de caja */
+    width: 150px;
+    height: 130px;
+    padding: 12px;
+    border: solid 3px green;
+    margin: 30px;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: aqua;
+    height: 150px;
+}
+
+main{
+    background-color: pink;
+    height: 800px;
+}
+
+footer{
+    background-color: blueviolet;
+    height: 150px;
+}
+
+strong{
+    width: 1000px;
+}

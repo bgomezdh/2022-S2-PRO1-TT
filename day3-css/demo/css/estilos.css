@@ -1,0 +1,40 @@
+/* Selector de etiqueta */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://s.yimg.com/ny/api/res/1.2/PypNH5Lt4c1dICoIkeCQ9w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MA--/https://s.yimg.com/os/creatr-uploaded-images/2022-03/53f55e10-b059-11ec-bdee-a0b8d985475c");
+}
+
+/* Selectores de clases */
+.par{
+    color: #0000ff;
+}
+
+.impar{
+    color: #ff0000;
+}
+
+.parrafo{
+    font-size: 16px;
+}
+
+.item{
+    background-color: rgba(0, 128, 0, 0.5);
+    font-weight: 800;
+}
+
+/* Selectores de ID */
+#listaDesordenada{
+    background-color: #bababa;
+}
+
+/* Selectores descendentes */
+ul .itemDistinto{
+    background-color: #0000ff;
+}
+
+/* Selector combinado */
+li.nuevaClase{
+    background-color: aqua;
+}
