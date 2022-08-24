@@ -1,0 +1,41 @@
+body{
+    background-color: aquamarine;
+}
+
+.cajaHija{
+    background-color: #ebe084;
+    background-repeat: no-repeat;
+    height: 165px;
+    width: 165px;
+    margin: 20px;
+   
+}
+
+.walter{
+    background-image: url('../img/walter.jpeg');
+    /* order: 0;
+    align-self: stretch; */
+}
+
+.matraz{
+    background-image: url('../img/matraz.jpeg');
+    /* order: 1;
+    align-self: stretch; */
+}
+
+.mascara{
+    background-image: url('../img/mascara.jpeg');
+    /* order: 2;
+    align-self: stretch; */
+}
+
+.cajaPadre{
+    background-color: #173317;
+    min-height: 300px;
+    /* Flexbox */
+    display: flex;
+    flex-wrap: wrap;                /* nowrap, wrap */
+    flex-direction: row;             /*  row-reverse, row, column-reverse, column  */
+    justify-content: flex-end;  /* space-evenly, space-around, space-between, flex-end */
+    align-items: flex-end;        /* flex-start, flex-end */
+}
