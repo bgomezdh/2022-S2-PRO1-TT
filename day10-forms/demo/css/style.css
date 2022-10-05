@@ -1,0 +1,43 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(
+    to top,
+    #8e44ad,
+    #c0392b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.formulario{
+    background: #ddd3d359;
+    width: 30%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.contenedor-input{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+button{
+    background: #5776e7;
+    width: 45%;
+    color: #fff;
+    border-color: transparent;
+    font-size: 18px;
+}

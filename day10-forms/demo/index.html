@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Contenido Principal -->
+
+    <main>
+        <!-- Crear un formulario -->
+        <form action="resultado.html" method="get" class="formulario">
+
+                <div class="contenedor-input">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre">
+                </div>
+
+                <div class="contenedor-input">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+
+                <div class="contenedor-input">
+                    <label for="asistencia">Asistio a clases?</label>
+                    <span>Sí</span>     <input type="radio" name="asistencia" value="si">
+                    <span>No</span>     <input type="radio" name="asistencia" value="no">
+                </div>
+
+
+                <div class="contenedor-input">
+                    <label for="hobbie">Hobbie?</label>
+                    <span>Fútbol</span><input type="checkbox" name="hobbie" value="futbol">
+                    <span>Cantar</span><input type="checkbox" name="hobbie" value="cantar">
+                    <span>Bailar</span><input type="checkbox" name="hobbie" value="bailar">
+                </div>
+
+                <div class="contenedor-input">
+                    <label for="pass">Contraseña</label>
+                    <input type="password" name="pass" placeholder="Ingrese su pass">
+
+                </div>
+
+                <!-- Ultimas div -->
+
+                <div class="contenedor-input">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpiar</button>
+                </div>
+        </form>
+    </main>
+</body>
+</html>
