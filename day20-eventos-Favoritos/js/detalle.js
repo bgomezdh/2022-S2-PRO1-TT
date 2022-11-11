@@ -1,8 +1,9 @@
 /* Recuperamos la queryString */
-let qs = location.search; /* un string */
+let qs = location.search; /* un string ?-> */
 let qsObj = new URLSearchParams(qs);
 let idPersonaje = qsObj.get('idPersonaje');
-
+    /* 4 */
+    
 /* seleccionar todos los elementos del DOM */
 let titulo      = document.querySelector('.titulo');
 let estatus     = document.querySelector('.status');
@@ -11,7 +12,10 @@ let imagen      = document.querySelector('.imagen');
 let btn         = document.querySelector("#boton");
 
 /* Para buscar info debemos utilizar un fetch, y al fetch debemos pasarle una URL */
-let url = `https://rickandmortyapi.com/api/character/${idPersonaje}`
+let url =   `https://rickandmortyapi.com/api/character/${idPersonaje}`
+/*          `https://rickandmortyapi.com/api/character/4` */
+
+
 let id = idPersonaje;
 
 /* Creamos el fetch que nos traera la DATA */
@@ -31,6 +35,7 @@ fetch(url)
 
     return data;
 }).catch(function(error) {
+    console.log(error);
     return error;
 });
 
@@ -38,14 +43,18 @@ fetch(url)
 let favoritos = [];
 
 /* recuperamos el storage */
-let recupeStorage = localStorage.getItem('favoritos');
-
+let recuperoStorage = localStorage.getItem('favoritos');
+    /* ["2"] */
 /* Preguntamos si es distinto de nulo-  es verdarero quiero covertirlo de JSON a un array */
-if(recupeStorage != null){
-    favoritos = JSON.parse(recupeStorage);
+if(recuperoStorage != null){
+    favoritos = JSON.parse(recuperoStorage);
+    /* [2] */
+};
+
+/* Validar si este id existe en el favoritos (localsStorage) */
+if (favoritos.includes(idPersonaje)) {
+    btn.innerText="Quitar de Favorito";
 }
-
-
 
 
 
@@ -60,7 +69,7 @@ btn.addEventListener("click",function (e) {
         favoritos.splice(indice,1);
         btn.innerText="Agregar a Favorito";
     }else{
-    /* Si NO lo incluye, que lo agregue  del array y al boton le ponga "Quitar Favorito" */
+    /* Si NO lo incluye, que lo agregue al array y al boton le ponga "Quitar Favorito" */
         favoritos.push(id);
         btn.innerText="Quitar de Favorito";
     }
@@ -68,8 +77,8 @@ btn.addEventListener("click",function (e) {
     /* Si lo incluye o no, quiero poder subir el array al localStorage ->
     Pero tengo que pasarlo a JSON primeramente*/
     let favToString = JSON.stringify(favoritos);
-
+/*      ["2","4","5"]                [2,4,5]        */
     /* Cuando este en JSON ahora si puedo subirlo al localStorage */
     localStorage.setItem('favoritos',favToString)
     
-})
+});
